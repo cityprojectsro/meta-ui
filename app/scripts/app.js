@@ -7,13 +7,9 @@ angular.module('metaUiApp', ['ngResource'])
                 templateUrl: 'views/main.html',
                 controller: 'MainCtrl'
             })
-            .when('/persons', {
-                templateUrl: 'views/persons.html',
-                controller: 'PersonsCtrl'
-            })
-            .when('/apartments', {
-              templateUrl: 'views/apartments.html',
-              controller: 'ApartmentsCtrl'
+            .when('/:entity', {
+                templateUrl: 'views/entity.html',
+                controller: 'EntityCtrl'
             })
             .otherwise({
                 redirectTo: '/'
