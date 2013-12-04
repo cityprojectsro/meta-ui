@@ -15,6 +15,9 @@ angular.module('metaUiApp', ['ngResource'])
                 templateUrl: 'views/entityForm.html',
                 controller: 'EntityFormCtrl'
             })
+            .when('/:entity/:new', {
+                templateUrl: 'views/entityForm.html'
+            })
             .otherwise({
                 redirectTo: '/'
             });

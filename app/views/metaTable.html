@@ -1,4 +1,7 @@
-<div class="container" ng-show="meta.name">
+<div ng-show="meta.name">
+    <div class="pull-right">
+        <a class="btn btn-primary" href="#/{{ entityName }}/new"><i class="glyphicon glyphicon-plus"></i>Add</a>
+    </div>
     <div class="text-center"><h1>{{meta.name}}</h1></div>
     <table class="table table-striped table-hover">
         <thead>
