@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('metaUiApp')
-    .controller('EntityCtrl', ['$scope', 'Entity', '$routeParams', function ($scope, Entity, $routeParams) {
+    .controller('EntityListCtrl', ['$scope', 'Entity', '$routeParams', function ($scope, Entity, $routeParams) {
         $scope.entityName = $routeParams.entity
         Entity.getMeta({entity: $scope.entityName},
             function(data) {

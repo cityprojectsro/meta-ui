@@ -8,8 +8,12 @@ angular.module('metaUiApp', ['ngResource'])
                 controller: 'MainCtrl'
             })
             .when('/:entity', {
-                templateUrl: 'views/entity.html',
-                controller: 'EntityCtrl'
+                templateUrl: 'views/entityList.html',
+                controller: 'EntityListCtrl'
+            })
+            .when('/:entity/edit/:id', {
+                templateUrl: 'views/entityForm.html',
+                controller: 'EntityFormCtrl'
             })
             .otherwise({
                 redirectTo: '/'

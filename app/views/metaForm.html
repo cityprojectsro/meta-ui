@@ -1,1 +1,19 @@
-<p>This is the metaForm view.</p>
+<div class="container" ng-show="meta.name">
+    <h2>{{ meta.name }}:</h2>
+    <form class="form-horizontal" name="entityForm">
+        <div ng-repeat="k in meta.keys" class="control-group" ng-class="{error: entityForm[ k.key ].$invalid}">
+            <label class="control-label" for="{{ k.key }}">{{ k.label }}:</label>
+            <div class="controls">
+                <input type="{{ k.type }}" name="{{ k.key }}" ng-model="entity[ k.key ]" required>
+                <span ng-show="entityForm[ k.key ].$error.required" class="help-inline">Required</span>
+            </div>
+        </div>
+        <div class="controls">
+            <div class="control-group">
+                <a href="#/{{ entityName }}/table" class="btn">Cancel</a>
+                <button ng-click="save()" ng-disabled="entityForm.$invalid" class="btn btn-primary">Save</button>
+                <button ng-click="delete()" ng-show="entity.id" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </form>
+</div>
