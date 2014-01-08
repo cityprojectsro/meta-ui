@@ -20,9 +20,9 @@ app.put (root + '/:entity/:id', entity.edit);
 app.post(root + '/:entity', entity.add);
 app.delete(root + '/:entity/:id', entity.remove);
 
-
-app.use(function (req, res) {
-    res.json({'ok': false, 'status': '404'});
-});
+//
+//app.use(function (req, res) {
+//    res.json({'ok': false, 'status': '404'});
+//});
 
 module.exports = app;
